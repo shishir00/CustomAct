@@ -1,0 +1,7 @@
+name: My action 
+description: this will define actions
+runs:
+  using: node16
+  main: src/index.js
+ 
+ 
