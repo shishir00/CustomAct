@@ -1,10 +1,11 @@
 name: My action
-description: this will define actions
+description: This will define actions
 inputs:
   person:
-    description: 'greeting message'
+    description: 'Greeting message'
     required: true
-    default: 'Dhanmeet'
+    default: 'Dhanmeet'  # Default value
+
 runs:
-  using: node16
-  main: src/index.js
+  using: 'node16'
+  main: 'src/index.js'

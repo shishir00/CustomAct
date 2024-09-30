@@ -1,13 +1,23 @@
-name: test
+name: Test
+
 on:
   push:
- 
+    branches:
+      - main  # Specify the branch
+
 jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
         with:
-          node-version: 16
-      - uses: ./
+          node-version: '16'
+
+      - name: Run my custom action
+        uses: ./
+        with:
+          person: 'Alice'  # You can omit this to use the default value
