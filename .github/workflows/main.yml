@@ -19,5 +19,4 @@ jobs:
 
       - name: Run my custom action
         uses: ./
-        with:
-          person: 'Alice'  # You can omit this to use the default value
+       
